@@ -3,6 +3,8 @@ import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { useNavigate } from "react-router";
 import { useAuth } from "../contexts/AuthContext";
+import logoIcon from "../../imports/image-0.png";
+import logoText from "../../imports/image-1.png";
 
 export function LandingPage() {
   const navigate = useNavigate();
@@ -24,10 +26,8 @@ export function LandingPage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
-              <Shield className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-semibold text-gray-900">Verivo</span>
+            <img src={logoIcon} alt="Verivo" className="h-10 w-10" />
+            <img src={logoText} alt="Verivo" className="h-6" />
           </div>
           <nav className="flex items-center gap-6">
             <a href="#solution" className="text-gray-600 hover:text-gray-900 transition-colors">
@@ -121,49 +121,6 @@ export function LandingPage() {
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">4. Transparence</h3>
             <p className="text-sm text-gray-600">Résultats publics et vérifiables</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Le problème */}
-      <section className="bg-white py-20" id="probleme">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Le problème</h2>
-              <p className="text-lg text-gray-600">
-                Les scrutins traditionnels manquent de confiance et de transparence
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-6 border-red-200 bg-red-50/30">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl">⚠️</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Manque de confiance</h3>
-                <p className="text-sm text-gray-600">
-                  Les systèmes de vote actuels sont opaques et difficiles à vérifier
-                </p>
-              </Card>
-              <Card className="p-6 border-red-200 bg-red-50/30">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl">🔒</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Risques de fraude</h3>
-                <p className="text-sm text-gray-600">
-                  Impossibilité de prouver l'intégrité du processus électoral
-                </p>
-              </Card>
-              <Card className="p-6 border-red-200 bg-red-50/30">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl">❌</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Pas d'auditabilité</h3>
-                <p className="text-sm text-gray-600">
-                  Aucun moyen pour les participants de vérifier leur vote
-                </p>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
@@ -371,10 +328,8 @@ export function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-white font-semibold">Verivo</span>
+                <img src={logoIcon} alt="Verivo" className="h-8 w-8 brightness-0 invert" />
+                <img src={logoText} alt="Verivo" className="h-5 brightness-0 invert" />
               </div>
               <p className="text-sm">
                 La plateforme de vote électronique sécurisé pour les fédérations sportives françaises.

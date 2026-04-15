@@ -1,11 +1,11 @@
-import { 
-  LayoutDashboard, 
-  Vote, 
-  Users, 
-  Shield, 
-  Settings, 
-  Plus, 
-  Eye, 
+import {
+  LayoutDashboard,
+  Vote,
+  Users,
+  Shield,
+  Settings,
+  Plus,
+  Eye,
   TrendingUp,
   CheckCircle,
   Clock,
@@ -22,6 +22,7 @@ import { Progress } from "../components/ui/progress";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
+import logoIcon from "../../imports/image-0.png";
 
 export function AdminDashboard() {
   const navigate = useNavigate();
@@ -134,9 +135,7 @@ export function AdminDashboard() {
       <aside className="w-64 bg-white border-r flex flex-col">
         <div className="p-6 border-b">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
-              <Shield className="w-6 h-6 text-white" />
-            </div>
+            <img src={logoIcon} alt="Verivo" className="w-10 h-10" />
             <div>
               <div className="font-semibold text-gray-900">Verivo</div>
               <div className="text-xs text-gray-500">Admin Dashboard</div>

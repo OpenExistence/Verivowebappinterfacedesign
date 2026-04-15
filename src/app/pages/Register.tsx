@@ -8,6 +8,7 @@ import { Checkbox } from "../components/ui/checkbox";
 import { useNavigate } from "react-router";
 import { useAuth, UserRole } from "../contexts/AuthContext";
 import { toast } from "sonner";
+import logoIcon from "../../imports/image-0.png";
 
 export function Register() {
   const navigate = useNavigate();
@@ -72,8 +73,8 @@ export function Register() {
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl mb-4">
-            <Shield className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-16 h-16 mb-4">
+            <img src={logoIcon} alt="Verivo" className="w-16 h-16" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Créer un compte</h1>
           <p className="text-gray-600">Rejoignez Verivo pour des élections sécurisées</p>
